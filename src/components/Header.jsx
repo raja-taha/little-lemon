@@ -1,7 +1,14 @@
-import React from "react";
+import Nav from "./Nav";
+import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
-const Header = () => {
-  return <div>Header</div>;
-};
-
-export default Header;
+export default function Header() {
+  return (
+    <header>
+      <Link to="/">
+        <img src={logo} alt="little lemon" />
+      </Link>
+      <Nav />
+    </header>
+  );
+}
