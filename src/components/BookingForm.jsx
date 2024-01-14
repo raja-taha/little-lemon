@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 export default function BookingForm({ availableTimes, dispatch, submitForm }) {
   console.log(dispatch);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,6 +40,7 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
   const options = availableTimes.map((time) => (
     <option key={time}>{time}</option>
   ));
+
   return (
     <main>
       <p className="desc-text form-desc">
